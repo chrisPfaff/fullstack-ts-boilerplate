@@ -11,6 +11,7 @@ WORKDIR /client
 
 COPY client/frontend/package*.json client/frontend/yarn.lock ./
 RUN yarn install
+RUN yarn build
 COPY client/ .
 
 WORKDIR /server
